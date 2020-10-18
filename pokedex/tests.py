@@ -35,33 +35,3 @@ class PokemonCreateTestCase(APITestCase):
         )
 
 
-# class PokemonUpdateTestCase(APITestCase):
-#     """test case to test updating of a pokemon entry"""
-#     def test_update_pokemon(self):
-#         pokemon = Pokemon.objects.get(id=895)
-#         response = self.client.patch(
-#             '/api/v1/pokemons/{}/'.format(pokemon.number),
-#             {
-#                 'name': 'strukuna',
-#             },
-#             format='json',
-#         )
-#         updated = Pokemon.objects.get(number=pokemon.number)
-#         self.assertEqual(updated.name, 'strukuna')
-#
-#
-# class PokemonDestroyTestCase(APITestCase):
-#     """test case to test deletion of a pokemon entry"""
-#     def test_delete_pokemon(self):
-#         initial_pokemon_count = Pokemon.objects.count()
-#         pokemon_number = Pokemon.objects.get(number=998)
-#         self.client.delete('/api/v1/pokemons/{}/'.format(pokemon_number))
-#         self.assertEqual(
-#             Pokemon.objects.count(),
-#             initial_pokemon_count - 1,
-#         )
-#         self.assertRaises(
-#             Pokemon.DoesNotExist,
-#             Pokemon.obects.get,
-#             number=pokemon_number
-#         )
