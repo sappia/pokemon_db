@@ -1,0 +1,47 @@
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home - Pokedex</title>
+        {% load static %}
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/">
+                                {% load static %}
+                                <img src="{% static 'images/pokemon.png' %}" alt="My image">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="Pokedex" rel="home">Pokedex</a>
+                            </h1>
+                            <p>Lists all available pokemon.</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <div>
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon">
+                <div class="inner-wrap">
+                    Pokedex is a directory of all Pokemon discovered so far.
+                </div>
+            </footer>
+        </div>
+        {% load static %}
+        <script type="text/javascript" src="{% static 'main.js' %}"></script>
+    </body>
+</html>

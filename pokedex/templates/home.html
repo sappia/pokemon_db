@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    {% for pokemon in pokemons %}
+    <div class="pokemonname">
+        <a href="{% url 'pokemon_detail' pokemon.id %}">
+        <h3>{{ pokemon.name|capfirst }}</h3>
+        </a>
+        <p class="hidden">Pokemon Number/ID: {{ pokemon.number }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

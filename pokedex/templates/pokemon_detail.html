@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h3>{{ pokemon.name|capfirst }}</h3>
+    <p>Number: {{ pokemon.number }}</p>
+    <p>Height: {{ pokemon.height }}</p>
+    <p>Weight: {{ pokemon.weight }}</p>
+    <p>Types: {{ pokemon.types }}</p>
+    <p>Abilities: {{ pokemon.abilities }}</p>
+</div>
+{% endblock %}
